@@ -3,16 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CreateEmployeeComponent } from './employee/create-employee/create-employee.component';
+import { ListEmployeesComponent } from './employee/list-employees/list-employees.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      CreateEmployeeComponent,
+      ListEmployeesComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      ReactiveFormsModule
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }
