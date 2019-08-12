@@ -15,13 +15,13 @@
       </div>
 
       <div class="form-group">
-        <label class="col-md-2 control-label">Contact Preferance</label>
+        <label class="col-md-2 control-label">Contact Preference</label>
         <div class="col-md-8">
           <label class="radio-inline">
-            <input type="radio" value="email" formControlName="contactPreferance">Email
+            <input type="radio" value="email" formControlName="contactPreference">Email
           </label>
           <label class="radio-inline">
-            <input type="radio" value="phone" formControlName="contactPreferance">Phone
+            <input type="radio" value="phone" formControlName="contactPreference">Phone
           </label>
         </div>
       </div>
@@ -141,7 +141,7 @@
     </div>
     <div class="panel-footer">
       <div class="btn-toolbar">
-        <button class="btn btn-primary" type="submit">Save</button>
+        <button class="btn btn-primary" type="submit" [disabled]="employeeForm.invalid">Save</button>
         <button class="btn btn-primary" type="button" (click)="onLoadDataClick()">Load Data</button>
       </div>
     </div>

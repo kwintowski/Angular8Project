@@ -1,4 +1,4 @@
-import { ISkill } from './ISKill';
+import { ISkill } from './ISkill';
 
 export interface IEmployee {
   id: number;
