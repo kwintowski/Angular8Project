@@ -2,13 +2,13 @@
   "employees": [
     {
       "id": 1,
-      "fullName": "Mark",
+      "fullName": "Mark W",
       "contactPreference": "email",
-      "email": "mark@email.com",
-      "phone": "5641238971",
+      "email": "mark@dell.com",
+      "phone": "0456789321",
       "skills": [
         {
-          "skillName": "C#",
+          "skillName": "HTML",
           "experienceInYears": 1,
           "proficiency": "beginner"
         },
@@ -42,6 +42,6 @@
           "proficiency": "advanced"
         }
       ]
-    }   
+    }
   ]
 }
