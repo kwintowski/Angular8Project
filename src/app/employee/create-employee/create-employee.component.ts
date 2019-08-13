@@ -15,6 +15,7 @@ export class CreateEmployeeComponent implements OnInit {
 
   employeeForm: FormGroup;
   employee: IEmployee;
+  pageTitle: string;
 
   validationMessages = {
     fullName: {
@@ -71,6 +72,17 @@ export class CreateEmployeeComponent implements OnInit {
       const empId = +params.get('id');
       if (empId) {
         this.getEmployee(empId);
+        this.pageTitle='Edit Employee';
+      } else {
+        this.employee = {
+          id: null,
+          fullName: '',
+          contactPreference: '',
+          email: '',
+          phone: null,
+          skills: []
+        };
+        this.pageTitle='Create Employee';
       }
     });
   }
@@ -185,10 +197,18 @@ export class CreateEmployeeComponent implements OnInit {
 
   onSubmit(): void {
     this.mapFormValuesToEmployeeModel();
-    this.employeeService.updateEmployee(this.employee).subscribe(
-      () => this.router.navigate(['list']),
-      (err: any) => console.log(err)
-    );
+    if(this.employee.id) {
+      this.employeeService.updateEmployee(this.employee).subscribe(
+        () => this.router.navigate(['employees']),
+        (err: any) => console.log(err)
+      );
+    } else {
+      this.employeeService.addEmployee(this.employee).subscribe(
+        () => this.router.navigate(['employees']),
+        (err: any) => console.log(err)
+      );
+    }
+
   }
 
   mapFormValuesToEmployeeModel() {

@@ -42,6 +42,25 @@
           "proficiency": "advanced"
         }
       ]
+    },
+    {
+      "id": 3,
+      "fullName": "Andrew",
+      "contactPreference": "email",
+      "email": "andrew@dell.com",
+      "phone": "04321654987",
+      "skills": [
+        {
+          "skillName": "React",
+          "experienceInYears": "1",
+          "proficiency": "beginner"
+        },
+        {
+          "skillName": "Angular",
+          "experienceInYears": "1",
+          "proficiency": "beginner"
+        }
+      ]
     }
   ]
 }
